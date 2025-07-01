@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px;
+      background-color: transparent;
+      color:black;
+      
+      
+    }
+    header.scrolled {
+      background-color:rgb(128, 240, 191);
+      color: black;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      cursor: pointer;
+    }
+    li:hover{
+      background-color: rgb(159, 152, 160);
+      padding: 5px;
+      border-radius: 5px;
+      color: black;
+    }
+    .hero {
+      height: 80vh;
+      background: linear-gradient(to right, #66e6ea, #a24b86);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding-top: 80px;
+    }
+    .content {
+      padding: 100px 20px;
+      background: #f4f4f4;
+      min-height: 100vh; /* Just to enable scrolling */
+    }
+  </style>
+</head>
+<body>
+  <header id="navbar">
+    <nav>
+      <div class="logo">Responsive Landing Page</div>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Welcome to our Website</h1>
+      <p>This is my first task</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Task 1:</h2>
+    <p>This is the  interactive navigation menu that changes color or style when scrolled or when hovering over a menu item. </p>
+  </section>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
